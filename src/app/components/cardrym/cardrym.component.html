@@ -1,0 +1,25 @@
+<div class="tituloRyM">
+    <h1>
+        Api Ricky Morty
+    </h1>
+</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+@for(personaje of listaPersonajes; track $index){
+    <mat-grid-tile>
+    <mat-card class="example-card" appearance="outlined" >
+        <mat-card-header>
+        <mat-card-title-group>
+        <mat-card-title>{{personaje.name}}</mat-card-title>
+        <mat-card-subtitle>{{personaje.status}}</mat-card-subtitle>
+        <img class="imgrym" mat-card-md-image [src]="personaje.image" >
+        </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+        Genero: {{ personaje.gender }}<br>
+        Especie:{{personaje.species}}<br>
+        Origen:{{personaje.location.name}}
+        </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+}
+</mat-grid-list>
