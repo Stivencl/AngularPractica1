@@ -14,6 +14,7 @@ import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
     
   ],
   exports: [
+    CommonModule,
     MatCardModule,
     NgbPaginationModule, 
     NgbAlertModule

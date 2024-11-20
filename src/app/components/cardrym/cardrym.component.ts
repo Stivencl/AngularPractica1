@@ -16,7 +16,7 @@ export class CardrymComponent implements OnInit {
    listaPersonajes: any[] = [];
        //readonly dialog = inject(MatDialog);
        page: number = 1;
-       totalPages: number = 0;
+       
        
   constructor(private rymService: RymService,
           private dialog: MatDialog
