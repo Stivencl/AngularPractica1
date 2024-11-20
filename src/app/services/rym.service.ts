@@ -17,4 +17,11 @@ export class RymService {
   getCharacters(){
     return this.http.get(this.baseUrl + '/character', this.options)
   }//end of getCharacters
+   
+
+  getCharactersPagination(page: number){
+    return this.http.get(this.baseUrl + '/character/'+'?page='+page)
+  }//end of getCharactersPagination
+
+
 }

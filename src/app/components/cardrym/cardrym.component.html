@@ -3,7 +3,24 @@
         Api Ricky Morty
     </h1>
 </div>
+
+<div class="d-flex justify-content-end">
+    <div>
+        <ngb-pagination
+        [collectionSize]="826"
+        [(page)]="page"
+        [maxSize]="6"
+        [rotate]="true"
+        [ellipses]="false"
+        [boundaryLinks]="true"
+        [pageSize]="20"
+        (pageChange)="ngOnInit()"
+    />
+
+    </div>
+  </div>
 <mat-grid-list cols="2" rowHeight="2:1">
+    
 @for(personaje of listaPersonajes; track $index){
     <mat-grid-tile>
     <mat-card class="example-card" appearance="outlined" (click)="openDialog(personaje)">

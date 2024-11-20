@@ -15,22 +15,27 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class CardrymComponent implements OnInit {
    listaPersonajes: any[] = [];
        //readonly dialog = inject(MatDialog);
-   
+       page: number = 1;
+       totalPages: number = 0;
+       
   constructor(private rymService: RymService,
           private dialog: MatDialog
           
-  ) { 
-  }
+  ) { }
+
 
   ngOnInit(): void {
-    this.rymService.getCharacters().subscribe((data: any) => {
+    this.rymService.getCharactersPagination(this.page).subscribe((data: any) => {
       this.listaPersonajes = data.results;
     });
   }
 
   openDialog(character: any) {
-    this.dialog.open(DialogComponent, {data: {character }});
+    this.dialog.open(DialogComponent, {data: {character}});
     console.log(character);
     
   }
+
+   
+
 }

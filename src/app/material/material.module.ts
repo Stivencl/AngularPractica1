@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
-
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    NgbPaginationModule, 
+    NgbAlertModule
+
     
   ],
   exports: [
     MatCardModule,
+    NgbPaginationModule, 
+    NgbAlertModule
   ]
 })
 export class MaterialModule { }
